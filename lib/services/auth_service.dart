@@ -55,7 +55,7 @@ class AuthService {
   }
 
   // Get user data from Firestore
-  Future<Map<String, dynamic> getUserData(String uid) async {
+  Future<Map<String, dynamic>> getUserData(String uid) async {
     DocumentSnapshot doc = await _firestore.collection('users').doc(uid).get();
     return doc.data() as Map<String, dynamic>;
   }

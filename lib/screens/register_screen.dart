@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import '../services/auth_service.dart';
 
 class RegisterScreen extends StatefulWidget {
@@ -71,7 +72,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
               ElevatedButton(
                 onPressed: () async {
                   if (_formKey.currentState!.validate()) {
-                    User? user = await authService.signUp(
+                    final user = await authService.signUp(
                       _emailController.text.trim(),
                       _passwordController.text.trim(),
                       _firstNameController.text.trim(),

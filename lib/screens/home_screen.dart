@@ -3,7 +3,7 @@ import 'package:provider/provider.dart';
 import '../services/auth_service.dart';
 import 'profile_screen.dart';
 import 'settings_screen.dart';
-import 'message_board_screen.dart';
+import 'message_boards_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
